@@ -34,3 +34,24 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Getting Started
+
+#### Install npm dependencies:
+
+Install dependencies for your [`backend`](./backend). Open a terminal window and install the `backend`'s dependencies
+
+```bash
+cd backend
+npm install
+```
+
+### 1. Start the server (backend)
+
+On the same terminal in backend folder, run the following command to start the server:
+
+```bash
+npm run start
+```
+
+The server is now running at [`http://localhost:4000/`](http://localhost:4000/).

@@ -15,7 +15,23 @@ export const fetchPost = async (id) => {
 };
 
 export const fetchAllPost = async () => {
-  const res = await fetch(BASE_URL, { cache: "no-cache" });
+  try {
+    const res = await fetch(BASE_URL, { cache: "no-cache" });
+
+    if (!res.ok) {
+      return {
+        error: {
+          message: "Failed to fetch posts!",
+        },
+      };
+    }
+  } catch (error) {
+    return {
+      error: {
+        message: "Something went wrong!",
+      },
+    };
+  }
 
   return await res.json();
 };

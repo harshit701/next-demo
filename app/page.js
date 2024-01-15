@@ -6,7 +6,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const [postData, setPosts] = useState({});
+  const [postData, setPosts] = useState({
+    posts: [],
+    page: 1,
+    pageCount: 1,
+  });
+  const [error, setErorr] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleOnDelete = async (id) => {
     await deletePost(id);
@@ -19,10 +25,21 @@ const Home = () => {
     const fetchData = async () => {
       const posts = await fetchAllPost();
 
+      if (posts.error) {
+        setErorr(posts.error.message);
+
+        return;
+      }
+
       setPosts(posts);
     };
 
-    fetchData();
+    try {
+      setIsLoading(true);
+      fetchData();
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
 
   return (
@@ -34,6 +51,7 @@ const Home = () => {
       </SubmitBtn>
 
       {postData.posts &&
+        postData.posts.length > 0 &&
         postData.posts.map((post) => {
           return (
             <li key={post.id}>
@@ -50,6 +68,11 @@ const Home = () => {
             </li>
           );
         })}
+      {postData && !postData.posts && isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        <p>{error}</p>
+      )}
     </>
   );
 };

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "n1",
+    "title": "News 1",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n2",
+    "title": "News 2",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n3",
+    "title": "News 3",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n4",
+    "title": "News 4",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n5",
+    "title": "News 5",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n6",
+    "title": "News 6",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n7",
+    "title": "News 7",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n8",
+    "title": "News 8",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n9",
+    "title": "News 9",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n10",
+    "title": "News 10",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n11",
+    "title": "News 11",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n12",
+    "title": "News 12",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n13",
+    "title": "News 13",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  },
+  {
+    "id": "n14",
+    "title": "News 14",
+    "date": "2024-01-04",
+    "summary": "this is summary",
+    "content": "this is content",
+    "image": "https://www.videogamer.com/cdn-cgi/image/width=1280,height=720,fit=crop,quality=80,format=auto,onerror=redirect,metadata=none/wp-content/uploads/the-finals-review.jpg"
+  }
+]
