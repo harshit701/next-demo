@@ -30,18 +30,16 @@ const AddPostForm = ({ post, id }) => {
       data.id = id;
       const postData = await editPost(id, data);
 
-      console.log("edit post data", postData);
+      console.log("edited post data", postData);
 
       router.push("/"); // Redirect to the home page
     } else {
       // add post
       data.id = uuidv4();
-      const { response, data: postData } = await addPost(data);
+      const postData = await addPost(data);
 
       if (postData) {
-        console.log("add post data", postData);
-        console.log("add post response", response);
-
+        console.log("added post data", postData);
         // reset();
 
         router.push("/"); // Redirect to the home page

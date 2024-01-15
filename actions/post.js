@@ -25,6 +25,8 @@ export const fetchAllPost = async () => {
         },
       };
     }
+
+    return await res.json();
   } catch (error) {
     return {
       error: {
@@ -32,13 +34,11 @@ export const fetchAllPost = async () => {
       },
     };
   }
-
-  return await res.json();
 };
 
 export const addPost = async (data) => {
   try {
-    const postData = await fetch(BASE_URL, {
+    const res = await fetch(BASE_URL, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {
@@ -46,9 +46,11 @@ export const addPost = async (data) => {
       },
     });
 
-    const response = await postData.json();
+    const postData = await res.json();
 
-    return response;
+    console.log("postData", postData);
+
+    return postData;
   } catch (error) {
     return error;
   }
