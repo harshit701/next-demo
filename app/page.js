@@ -1,95 +1,57 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
 
-export default function Home() {
+import { deletePost, fetchAllPost } from "@/actions/post";
+import SubmitBtn from "@/components/ui/Button";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const Home = () => {
+  const [postData, setPosts] = useState({});
+
+  const handleOnDelete = async (id) => {
+    await deletePost(id);
+
+    const postData = await fetchAllPost();
+    setPosts(postData);
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const posts = await fetchAllPost();
+
+      setPosts(posts);
+    };
+
+    fetchData();
+  }, []);
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <h1>Home Page</h1>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <SubmitBtn>
+        <Link href="/post">Add Post</Link>
+      </SubmitBtn>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+      {postData.posts &&
+        postData.posts.map((post) => {
+          return (
+            <li key={post.id}>
+              <p>{post.title}</p>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+              <p> {post.body}</p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
+              <button>
+                <Link href={`post/` + post.id}>Edit</Link>
+              </button>
+              <button className="red" onClick={() => handleOnDelete(post.id)}>
+                Delete
+              </button>
+            </li>
+          );
+        })}
+    </>
+  );
+};
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Home;
